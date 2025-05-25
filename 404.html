@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - 骑士圈</title>
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 50px 20px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+        
+        .error-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .error-code {
+            font-size: 80px;
+            font-weight: bold;
+            color: #4a80f0;
+            margin: 0;
+        }
+        
+        .error-message {
+            font-size: 24px;
+            font-weight: 500;
+            margin: 10px 0 20px;
+        }
+        
+        .error-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4a80f0;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(74, 128, 240, 0.3);
+            transition: all 0.2s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 128, 240, 0.4);
+        }
+        
+        .bicycle-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #4a80f0;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="error-container">
+        <div class="bicycle-icon">
+            <i class="fas fa-bicycle"></i>
+        </div>
+        <h1 class="error-code">404</h1>
+        <div class="error-message">页面走丢了</div>
+        <div class="error-description">
+            您访问的页面可能已被移除、名称已更改或暂时不可用。
+        </div>
+        <a href="/" class="back-button">返回首页</a>
+    </div>
+</body>
+</html>

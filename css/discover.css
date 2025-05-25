@@ -1,0 +1,796 @@
+/* 发现页面样式 */
+
+/* 标签导航栏样式 */
+.tab-section {
+    background-color: #fff;
+    margin-bottom: 12px;
+    position: sticky;
+    top: 56px;
+    z-index: 90;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tab-container {
+    display: flex;
+    padding: 5px 10px;
+    justify-content: space-around;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+    color: #666;
+    position: relative;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab i {
+    font-size: 18px;
+    margin-bottom: 4px;
+    display: block;
+    opacity: 0.8;
+}
+
+.tab span {
+    font-size: 13px;
+}
+
+.tab.active {
+    color: #4a80f0;
+}
+
+.tab.active i {
+    opacity: 1;
+}
+
+.tab.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    background-color: #4a80f0;
+    border-radius: 3px;
+}
+
+/* 标签页内容区域样式 */
+.tab-content {
+    position: relative;
+}
+
+.tab-pane {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tab-pane.active {
+    display: block;
+    opacity: 1;
+}
+
+/* 创建动态框样式 */
+.post-creator {
+    background-color: #fff;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.creator-header {
+    display: flex;
+    align-items: center;
+}
+
+.post-input {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+.post-input input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.post-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f2f7fe;
+    color: #4a80f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* 热门话题样式 */
+.hot-topics {
+    background-color: #fff;
+    padding: 10px 0;
+    margin-bottom: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.hot-topics::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.topics-scroll {
+    padding: 0 15px;
+    display: inline-flex;
+}
+
+.topic-item {
+    margin-right: 15px;
+    padding: 6px 12px;
+    background-color: #f2f7fe;
+    border-radius: 15px;
+    font-size: 13px;
+    color: #4a80f0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.topic-item i {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+/* 动态内容流样式 */
+.feed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 12px;
+}
+
+.post-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.user-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.user-level {
+    font-size: 11px;
+    background-color: #ffb74d;
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.fa-check-circle {
+    color: #4a80f0;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.follow-btn {
+    padding: 5px 10px;
+    background-color: #f2f7fe;
+    color: #4a80f0;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.follow-btn.followed {
+    background-color: #eee;
+    color: #999;
+}
+
+.post-content {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.post-content p {
+    margin: 0;
+}
+
+/* 图片网格样式 */
+.post-images {
+    margin-bottom: 12px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.post-location {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+.post-location i {
+    color: #4a80f0;
+    margin-right: 3px;
+}
+
+/* 交互按钮样式 */
+.post-actions {
+    display: flex;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 12px;
+    padding-top: 12px;
+}
+
+.action-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.action-item i {
+    margin-right: 5px;
+}
+
+.fa-heart.fas {
+    color: #ff5252;
+}
+
+/* 评论预览样式 */
+.post-comments-preview {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.comment-item {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.comment-user {
+    font-weight: 500;
+    color: #4a80f0;
+}
+
+.more-comments {
+    color: #999;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* 活动帖子样式 */
+.event-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.event-banner {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 12px;
+}
+
+.event-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.event-detail {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.event-detail i {
+    color: #4a80f0;
+    margin-right: 5px;
+    width: 16px;
+    text-align: center;
+}
+
+.join-event-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a80f0;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* 骑行数据卡片样式 */
+.ride-data-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.ride-map {
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.ride-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ride-distance {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ride-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 15px 10px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #888;
+    margin-top: 3px;
+}
+
+.bike-info {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    background-color: #fff;
+}
+
+.bike-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f2f7fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a80f0;
+    margin-right: 10px;
+}
+
+.bike-name {
+    font-size: 13px;
+    color: #666;
+}
+
+/* 视频帖样式 */
+.video-container {
+    margin-bottom: 12px;
+}
+
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* 加载更多样式 */
+.load-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0 80px;
+    color: #999;
+    font-size: 14px;
+}
+
+.load-more i {
+    margin-left: 8px;
+}
+
+/* 骑友标签页样式 */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f7fa;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 15px 15px 20px;
+}
+
+.search-bar i {
+    color: #aaa;
+    margin-right: 8px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.riders-list {
+    padding: 0 15px;
+}
+
+.rider-card {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.rider-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.rider-info {
+    flex: 1;
+}
+
+.rider-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.rider-bio {
+    font-size: 13px;
+    color: #999;
+}
+
+/* 话题标签页样式 */
+.topics-grid {
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.topic-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+}
+
+.topic-header {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.topic-stats {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 12px;
+}
+
+.topic-follow-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: #f2f7fe;
+    color: #4a80f0;
+    display: inline-block;
+}
+
+.topic-follow-btn.followed {
+    background-color: #eee;
+    color: #999;
+}
+
+/* 活动标签页样式 */
+.events-filter {
+    display: flex;
+    padding: 0 15px;
+    margin: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-item {
+    padding: 0 15px 10px;
+    font-size: 14px;
+    color: #666;
+    position: relative;
+}
+
+.filter-item.active {
+    color: #4a80f0;
+    font-weight: 500;
+}
+
+.filter-item.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background-color: #4a80f0;
+    border-radius: 2px;
+}
+
+.events-list {
+    padding: 0 15px;
+}
+
+.event-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.event-image {
+    position: relative;
+    height: 150px;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.event-status.ongoing {
+    background-color: #4caf50;
+}
+
+.event-status.upcoming {
+    background-color: #ff9800;
+}
+
+.event-details {
+    padding: 15px;
+}
+
+.event-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+.event-time, .event-location {
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.event-time i, .event-location i {
+    margin-right: 5px;
+    color: #999;
+}
+
+.event-brief {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-participants {
+    display: flex;
+    align-items: center;
+}
+
+.participant-avatars {
+    display: flex;
+    margin-right: 8px;
+}
+
+.participant-avatars img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: -10px;
+}
+
+.participant-count {
+    font-size: 12px;
+    color: #999;
+}
+
+.join-event-btn {
+    background-color: #4a80f0;
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+/* 响应式调整 */
+@media (max-width: 360px) {
+    .ride-stats {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .event-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-grid img {
+        height: 80px;
+    }
+}

@@ -1,0 +1,360 @@
+/* 注册页面样式 */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+/* 顶部导航栏 */
+.register-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: transparent;
+}
+
+.back-btn {
+    color: #333;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+/* 注册表单区域 */
+.register-content {
+    flex: 1;
+    padding: 10px 0 30px;
+}
+
+.register-form-section {
+    padding: 10px 25px;
+}
+
+/* 步骤指示器 */
+.step-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.step-label {
+    font-size: 12px;
+    color: #999;
+}
+
+.step.active .step-number {
+    background-color: #4a80f0;
+}
+
+.step.active .step-label {
+    color: #4a80f0;
+    font-weight: 500;
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background-color: #e0e0e0;
+    margin: 0 10px;
+    margin-bottom: 25px;
+}
+
+/* 表单步骤 */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.step-desc {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 25px;
+}
+
+/* 输入框样式 */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.input-prefix {
+    padding: 0 15px 0 5px;
+    color: #999;
+    font-size: 14px;
+}
+
+.input-suffix {
+    padding: 0 5px 0 15px;
+    color: #999;
+    cursor: pointer;
+}
+
+.form-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    font-size: 15px;
+    background: transparent;
+}
+
+.input-tip {
+    margin-top: -15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #999;
+    padding-left: 5px;
+}
+
+.get-code-btn {
+    background: transparent;
+    border: none;
+    color: #4a80f0;
+    padding: 0 0 0 15px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* 下拉选择框 */
+.form-select {
+    flex: 1;
+    position: relative;
+}
+
+.gender-select {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    font-size: 15px;
+    background: transparent;
+    appearance: none;
+    color: #333;
+}
+
+.gender-select option {
+    color: #333;
+}
+
+.gender-select option:first-child {
+    color: #999;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+}
+
+/* 头像上传 */
+.avatar-upload {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.default-avatar {
+    font-size: 40px;
+    color: #ccc;
+}
+
+.avatar-edit {
+    text-align: center;
+}
+
+.avatar-edit label {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    color: #666;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.avatar-edit input {
+    display: none;
+}
+
+/* 协议选项 */
+.login-option {
+    margin: 25px 0;
+    font-size: 13px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #4a80f0;
+    border-color: #4a80f0;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.agreement-text {
+    color: #666;
+    margin-left: 5px;
+}
+
+.agreement-text a {
+    color: #4a80f0;
+    text-decoration: none;
+}
+
+/* 按钮样式 */
+.next-step-btn, .register-btn {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #4a80f0;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(74, 128, 240, 0.3);
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+.next-step-btn:hover, .register-btn:hover {
+    background-color: #3a70e0;
+    box-shadow: 0 5px 12px rgba(74, 128, 240, 0.4);
+}
+
+.prev-step-btn {
+    width: 100%;
+    padding: 15px 0;
+    background-color: transparent;
+    color: #999;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* 底部版权 */
+.register-footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #999;
+}
+
+/* 响应式调整 */
+@media (max-width: 320px) {
+    .register-form-section {
+        padding: 5px 20px;
+    }
+    
+    .step-title {
+        font-size: 18px;
+    }
+    
+    .step-desc {
+        font-size: 13px;
+    }
+    
+    .avatar-preview {
+        width: 80px;
+        height: 80px;
+    }
+}

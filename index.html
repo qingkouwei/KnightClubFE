@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>骑士圈 - 专业骑行社交与路线推荐App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部导航栏 -->
+        <header class="app-header">
+            <div class="header-left">
+                <img src="images/logo.svg" alt="骑士圈" class="logo">
+            </div>
+            <div class="header-title">骑士圈</div>
+            <div class="header-right">
+                <a href="login.html" class="login-link"><i class="fas fa-user"></i></a>
+                <i class="fas fa-bell"></i>
+            </div>
+        </header>
+
+        <!-- 主内容区域 -->
+        <main class="app-content">
+            <!-- 轮播图区域 -->
+            <section class="banner-section">
+                <div class="banner-container">
+                    <div class="banner-item active">
+                        <img src="https://picsum.photos/seed/cycling1/1000/500" alt="精品路线">
+                        <div class="banner-text">发现城市周边最美骑行路线</div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://picsum.photos/seed/cycling2/1000/500" alt="骑行挑战">
+                        <div class="banner-text">参与骑行挑战，展示你的实力</div>
+                    </div>
+                    <div class="banner-item">
+                        <img src="https://picsum.photos/seed/cycling3/1000/500" alt="骑友社区">
+                        <div class="banner-text">加入骑友圈，一起骑行去探险</div>
+                    </div>
+                    <button class="banner-nav prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="banner-nav next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="banner-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+
+            <!-- 功能快捷入口 -->
+            <section class="quick-access">
+                <div class="quick-item">
+                    <div class="quick-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="quick-text">路线推荐</div>
+                </div>
+                <div class="quick-item">
+                    <div class="quick-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="quick-text">开始骑行</div>
+                </div>
+                <div class="quick-item">
+                    <div class="quick-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="quick-text">我的成就</div>
+                </div>
+                <div class="quick-item">
+                    <div class="quick-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="quick-text">骑友圈</div>
+                </div>
+            </section>
+
+            <!-- 热门路线推荐 -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">热门路线</h2>
+                    <a href="#" class="section-more">更多 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="route-list">
+                    <div class="route-card">
+                        <div class="route-image">
+                            <img src="https://picsum.photos/seed/route1/800/600" alt="西湖环线">
+                            <span class="route-difficulty easy">初级</span>
+                        </div>
+                        <div class="route-info">
+                            <h3 class="route-title">杭州西湖环线</h3>
+                            <div class="route-stats">
+                                <span><i class="fas fa-road"></i> 15.8公里</span>
+                                <span><i class="fas fa-mountain"></i> 120m</span>
+                                <span><i class="fas fa-clock"></i> 约2小时</span>
+                            </div>
+                            <div class="route-rating">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="rating-count">4.8 (356人评价)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="route-card">
+                        <div class="route-image">
+                            <img src="https://picsum.photos/seed/route2/800/600" alt="滨海绿道">
+                            <span class="route-difficulty medium">中级</span>
+                        </div>
+                        <div class="route-info">
+                            <h3 class="route-title">深圳滨海绿道</h3>
+                            <div class="route-stats">
+                                <span><i class="fas fa-road"></i> 30.5公里</span>
+                                <span><i class="fas fa-mountain"></i> 220m</span>
+                                <span><i class="fas fa-clock"></i> 约3.5小时</span>
+                            </div>
+                            <div class="route-rating">
+                                <span class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <span class="rating-count">4.2 (289人评价)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 骑行动态 -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">骑友动态</h2>
+                    <a href="#" class="section-more">更多 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="social-list">
+                    <div class="social-card">
+                        <div class="user-info">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="用户头像" class="user-avatar">
+                            <div class="user-meta">
+                                <div class="user-name">山地骑士</div>
+                                <div class="post-time">2小时前</div>
+                            </div>
+                            <button class="follow-btn">关注</button>
+                        </div>
+                        <div class="post-content">
+                            今天完成了杭州环西湖骑行，风景太美了，分享一些照片给大家！#西湖骑行 #周末好去处
+                        </div>
+                        <div class="post-images">
+                            <img src="https://picsum.photos/seed/post1/400/300" alt="骑行照片">
+                            <img src="https://picsum.photos/seed/post2/400/300" alt="骑行照片">
+                            <img src="https://picsum.photos/seed/post3/400/300" alt="骑行照片">
+                        </div>
+                        <div class="post-stats">
+                            <div class="stat-item"><i class="far fa-heart"></i> 58</div>
+                            <div class="stat-item"><i class="far fa-comment"></i> 12</div>
+                            <div class="stat-item"><i class="far fa-share-square"></i> 5</div>
+                        </div>
+                    </div>
+                    <div class="social-card">
+                        <div class="user-info">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="用户头像" class="user-avatar">
+                            <div class="user-meta">
+                                <div class="user-name">骑行达人</div>
+                                <div class="post-time">昨天</div>
+                            </div>
+                            <button class="follow-btn followed">已关注</button>
+                        </div>
+                        <div class="post-content">
+                            刚刚完成了100公里挑战赛，新的个人记录！分享我的骑行数据，希望对大家有帮助。
+                        </div>
+                        <div class="post-data">
+                            <div class="data-card">
+                                <div class="data-title">总距离</div>
+                                <div class="data-value">103.5km</div>
+                            </div>
+                            <div class="data-card">
+                                <div class="data-title">时间</div>
+                                <div class="data-value">4h 26m</div>
+                            </div>
+                            <div class="data-card">
+                                <div class="data-title">均速</div>
+                                <div class="data-value">23.4km/h</div>
+                            </div>
+                        </div>
+                        <div class="post-stats">
+                            <div class="stat-item"><i class="far fa-heart"></i> 126</div>
+                            <div class="stat-item"><i class="far fa-comment"></i> 28</div>
+                            <div class="stat-item"><i class="far fa-share-square"></i> 15</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 推荐活动 -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">近期活动</h2>
+                    <a href="#" class="section-more">更多 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="event-list">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://picsum.photos/seed/event1/800/400" alt="骑行活动">
+                            <div class="event-date">
+                                <span class="date-day">28</span>
+                                <span class="date-month">5月</span>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">2025湖畔百公里骑行挑战</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 杭州西湖区</span>
+                                <span><i class="fas fa-users"></i> 258人参加</span>
+                            </div>
+                            <button class="join-btn">立即报名</button>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="https://picsum.photos/seed/event2/800/400" alt="骑行活动">
+                            <div class="event-date">
+                                <span class="date-day">15</span>
+                                <span class="date-month">6月</span>
+                            </div>
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">初夏骑游 - 乡间小道探索之旅</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 苏州太湖边</span>
+                                <span><i class="fas fa-users"></i> 125人参加</span>
+                            </div>
+                            <button class="join-btn">立即报名</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部导航 -->
+        <footer class="app-footer">
+            <div class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </div>
+            <div class="nav-item">
+                <a href="routes.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>路线</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="riding.html" style="color: inherit; text-decoration: none;">
+                    <div class="nav-center-btn">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="discover.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-compass"></i>
+                    <span>发现</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="profile.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

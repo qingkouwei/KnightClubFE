@@ -1,0 +1,363 @@
+/* 登录页面样式 */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+/* 顶部导航栏 */
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: transparent;
+}
+
+.back-btn {
+    color: #333;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.help-btn {
+    color: #4a80f0;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Logo 区域 */
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.app-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.app-slogan {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 登录表单 */
+.login-form-section {
+    padding: 10px 25px 30px;
+}
+
+.login-tabs {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 15px;
+    color: #999;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab.active {
+    color: #4a80f0;
+    font-weight: 500;
+}
+
+.tab.active:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 20%;
+    width: 60%;
+    height: 3px;
+    background-color: #4a80f0;
+    border-radius: 3px;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.input-prefix {
+    padding: 0 15px 0 5px;
+    color: #999;
+    font-size: 14px;
+}
+
+.input-suffix {
+    padding: 0 5px 0 15px;
+    color: #999;
+    cursor: pointer;
+}
+
+.form-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    font-size: 15px;
+    background: transparent;
+}
+
+.get-code-btn {
+    background: transparent;
+    border: none;
+    color: #4a80f0;
+    padding: 0 0 0 15px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* 登录选项 */
+.login-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #4a80f0;
+    border-color: #4a80f0;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.agreement-text {
+    color: #666;
+    margin-left: 5px;
+}
+
+.agreement-text a {
+    color: #4a80f0;
+    text-decoration: none;
+}
+
+.forgot-password {
+    color: #4a80f0;
+    text-decoration: none;
+}
+
+/* 登录按钮 */
+.login-btn {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #4a80f0;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(74, 128, 240, 0.3);
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #3a70e0;
+    box-shadow: 0 5px 12px rgba(74, 128, 240, 0.4);
+}
+
+/* 其他登录方式 */
+.other-login-section {
+    padding: 30px 25px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #999;
+    font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.divider span {
+    padding: 0 10px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+    font-size: 22px;
+    background-color: #f5f5f5;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-btn.wechat {
+    color: #07C160;
+}
+
+.social-btn.qq {
+    color: #12B7F5;
+}
+
+.social-btn.weibo {
+    color: #E6162D;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 注册引导 */
+.register-guide {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-link {
+    color: #4a80f0;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+/* 底部版权 */
+.login-footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #999;
+}
+
+/* 响应式调整 */
+@media (max-width: 320px) {
+    .logo-section {
+        padding: 20px 0;
+    }
+    
+    .login-logo {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .app-name {
+        font-size: 22px;
+    }
+    
+    .app-slogan {
+        font-size: 13px;
+    }
+    
+    .login-form-section {
+        padding: 5px 20px 20px;
+    }
+    
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        margin: 0 12px;
+    }
+}
+
+@media (min-height: 700px) {
+    .logo-section {
+        padding: 40px 0;
+    }
+    
+    .login-logo {
+        width: 90px;
+        height: 90px;
+    }
+}

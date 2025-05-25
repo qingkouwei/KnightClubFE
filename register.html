@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>注册 - 骑士圈</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container register-container">
+        <!-- 顶部区域 -->
+        <header class="register-header">
+            <div class="header-left">
+                <a href="login.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            <h1 class="header-title">注册账号</h1>
+            <div class="header-right"></div>
+        </header>
+
+        <!-- 主内容区域 -->
+        <main class="register-content">
+            <!-- 注册表单 -->
+            <section class="register-form-section">
+                <!-- 步骤指示器 -->
+                <div class="step-indicator">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-label">验证手机</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">设置账号</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">完成注册</div>
+                    </div>
+                </div>
+
+                <!-- 步骤1：手机验证 -->
+                <div class="form-step active" id="step1">
+                    <div class="step-title">手机号验证</div>
+                    <div class="step-desc">我们将发送验证码到您的手机</div>
+                    
+                    <div class="input-group">
+                        <div class="input-prefix">+86</div>
+                        <input type="tel" placeholder="请输入手机号码" class="form-input phone-input">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="请输入验证码" class="form-input code-input">
+                        <button class="get-code-btn">获取验证码</button>
+                    </div>
+                    <button class="next-step-btn">下一步</button>
+                </div>
+
+                <!-- 步骤2：设置账号 -->
+                <div class="form-step" id="step2">
+                    <div class="step-title">设置账号信息</div>
+                    <div class="step-desc">创建您在骑士圈的个人账号</div>
+                    
+                    <div class="input-group">
+                        <div class="input-prefix"><i class="fas fa-user"></i></div>
+                        <input type="text" placeholder="设置用户名" class="form-input username-input">
+                    </div>
+                    <div class="input-tip">用户名可包含字母、数字，长度4-20位</div>
+                    
+                    <div class="input-group">
+                        <div class="input-prefix"><i class="fas fa-lock"></i></div>
+                        <input type="password" placeholder="设置密码" class="form-input password-input">
+                        <div class="input-suffix toggle-password">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                    </div>
+                    <div class="input-tip">密码需包含字母、数字，长度8-20位</div>
+                    
+                    <div class="input-group">
+                        <div class="input-prefix"><i class="fas fa-lock"></i></div>
+                        <input type="password" placeholder="确认密码" class="form-input confirm-password-input">
+                    </div>
+                    
+                    <button class="next-step-btn">下一步</button>
+                    <button class="prev-step-btn">返回上一步</button>
+                </div>
+
+                <!-- 步骤3：完成注册 -->
+                <div class="form-step" id="step3">
+                    <div class="step-title">完善个人资料</div>
+                    <div class="step-desc">告诉我们更多关于您的信息</div>
+                    
+                    <div class="avatar-upload">
+                        <div class="avatar-preview">
+                            <div class="default-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="avatar-edit">
+                            <label for="avatar-input">选择头像</label>
+                            <input type="file" id="avatar-input" accept="image/*">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-prefix"><i class="fas fa-user-edit"></i></div>
+                        <input type="text" placeholder="昵称（可选）" class="form-input nickname-input">
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-prefix"><i class="fas fa-venus-mars"></i></div>
+                        <div class="form-select">
+                            <select class="gender-select">
+                                <option value="" disabled selected>性别（可选）</option>
+                                <option value="male">男</option>
+                                <option value="female">女</option>
+                                <option value="other">其他</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-arrow"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-prefix"><i class="fas fa-calendar-alt"></i></div>
+                        <input type="text" placeholder="出生年月（可选）" class="form-input birthday-input" readonly>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-prefix"><i class="fas fa-map-marker-alt"></i></div>
+                        <input type="text" placeholder="所在地区（可选）" class="form-input location-input" readonly>
+                    </div>
+                    
+                    <div class="login-option">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="agreement-text">我已阅读并同意<a href="#">用户协议</a>和<a href="#">隐私政策</a></span>
+                        </label>
+                    </div>
+                    
+                    <button class="register-btn">完成注册</button>
+                    <button class="prev-step-btn">返回上一步</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部版权信息 -->
+        <footer class="register-footer">
+            <div class="copyright">© 2025 骑士圈 - 专业骑行社交与路线推荐App</div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

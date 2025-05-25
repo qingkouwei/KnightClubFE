@@ -1,0 +1,503 @@
+/* 个人页面样式 */
+
+/* 个人资料卡样式 */
+.profile-card {
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.profile-header {
+    position: relative;
+}
+
+.cover-photo {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    position: relative;
+    padding: 0 15px 15px;
+}
+
+.avatar-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-avatar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 26px;
+    height: 26px;
+    background-color: #4a80f0;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.user-details {
+    margin-bottom: 12px;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px;
+}
+
+.user-id {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.user-bio {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.edit-profile-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    color: #4a80f0;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-stats {
+    display: flex;
+    border-top: 1px solid #f0f0f0;
+    padding: 12px 0;
+}
+
+.profile-stats .stat-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.profile-stats .stat-item:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    bottom: 20%;
+    width: 1px;
+    background-color: #f0f0f0;
+}
+
+.profile-stats .stat-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.profile-stats .stat-label {
+    font-size: 13px;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* 骑行数据统计样式 */
+.ride-stats-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.time-selector {
+    display: flex;
+    font-size: 13px;
+    color: #666;
+}
+
+.time-selector span {
+    margin-right: 15px;
+    padding: 3px 0;
+}
+
+.time-selector span.active {
+    color: #4a80f0;
+    font-weight: 500;
+    position: relative;
+}
+
+.time-selector span.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #4a80f0;
+    border-radius: 1px;
+}
+
+.time-period {
+    font-size: 13px;
+    color: #999;
+}
+
+.main-stats {
+    display: flex;
+    padding: 20px 15px;
+}
+
+.main-stat-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f2f7fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a80f0;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.stat-data {
+    text-align: left;
+}
+
+.main-stat-item .stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+}
+
+.main-stat-item .stat-unit {
+    font-size: 12px;
+    color: #999;
+}
+
+.sub-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-top: 1px solid #f0f0f0;
+    background-color: #f9f9f9;
+}
+
+.sub-stat-item {
+    padding: 12px 15px;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sub-stat-item:nth-child(2n) {
+    border-right: none;
+}
+
+.sub-stat-item:nth-child(3), .sub-stat-item:nth-child(4) {
+    border-bottom: none;
+}
+
+.sub-stat-label {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.sub-stat-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* 成就与勋章样式 */
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    padding: 5px 0;
+}
+
+.achievement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 22px;
+    color: #ccc;
+    background-color: #f9f9f9;
+}
+
+.achievement-item.achieved .achievement-icon {
+    color: #ffb400;
+    background-color: #fff8e1;
+}
+
+.achievement-title {
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+}
+
+.achievement-item.achieved .achievement-title {
+    color: #333;
+    font-weight: 500;
+}
+
+/* 骑行记录样式 */
+.ride-records {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ride-record-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ride-record-item:last-child {
+    border-bottom: none;
+}
+
+.record-date {
+    width: 50px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.record-day {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4a80f0;
+}
+
+.record-month {
+    font-size: 13px;
+    color: #999;
+}
+
+.record-info {
+    flex: 1;
+}
+
+.record-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.record-data {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: #666;
+}
+
+.record-data span {
+    margin-right: 12px;
+}
+
+.record-data i {
+    color: #4a80f0;
+    margin-right: 3px;
+}
+
+.record-icon {
+    color: #ccc;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* 常用功能样式 */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding: 5px 0;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f2f7fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a80f0;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.feature-name {
+    font-size: 12px;
+    color: #333;
+}
+
+/* 我的动态样式 */
+.my-posts {
+    margin-top: 5px;
+}
+
+.post-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 15px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-time {
+    font-size: 13px;
+    color: #999;
+}
+
+.post-actions-menu {
+    color: #999;
+    padding: 5px;
+}
+
+.post-content {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.post-images .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.post-stats {
+    display: flex;
+    margin-top: 12px;
+    color: #888;
+}
+
+.post-stats .stat-item {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.post-stats i {
+    margin-right: 4px;
+}
+
+.fa-heart.fas {
+    color: #ff5252;
+}
+
+/* 响应式调整 */
+@media (max-width: 360px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .main-stat-item .stat-value {
+        font-size: 16px;
+    }
+    
+    .sub-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .sub-stat-item {
+        border-right: none;
+    }
+    
+    .sub-stat-item:nth-child(3) {
+        border-bottom: 1px solid #f0f0f0;
+    }
+}

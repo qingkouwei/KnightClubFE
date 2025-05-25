@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我的 - 骑士圈</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部导航栏 -->
+        <header class="app-header">
+            <div class="header-left">
+                <img src="images/logo.svg" alt="骑士圈" class="logo">
+            </div>
+            <div class="header-title">个人中心</div>
+            <div class="header-right">
+                <i class="fas fa-cog"></i>
+            </div>
+        </header>
+
+        <!-- 主内容区域 -->
+        <main class="app-content">
+            <!-- 个人资料卡 -->
+            <section class="profile-card">
+                <div class="profile-header">
+                    <div class="cover-photo">
+                        <img src="https://picsum.photos/seed/panorama/1200/400" alt="封面照片">
+                    </div>
+                    <div class="profile-info">
+                        <div class="avatar-container">
+                            <img src="https://i.pravatar.cc/150?img=32" alt="我的头像" class="profile-avatar">
+                            <div class="edit-avatar">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="user-details">
+                            <h2 class="user-name">骑行爱好者</h2>
+                            <div class="user-id">ID: knight_88756</div>
+                            <div class="user-bio">热爱骑行，探索城市每一个角落</div>
+                        </div>
+                        <button class="edit-profile-btn">
+                            <i class="fas fa-edit"></i> 编辑资料
+                        </button>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">128</div>
+                        <div class="stat-label">关注</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">256</div>
+                        <div class="stat-label">粉丝</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">58</div>
+                        <div class="stat-label">动态</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1.5K</div>
+                        <div class="stat-label">获赞</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 骑行数据统计 -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">骑行数据</h2>
+                    <a href="#" class="section-more">详细 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="ride-stats-card">
+                    <div class="stats-header">
+                        <div class="time-selector">
+                            <span class="active">本月</span>
+                            <span>今年</span>
+                            <span>全部</span>
+                        </div>
+                        <div class="time-period">2025年5月</div>
+                    </div>
+                    <div class="main-stats">
+                        <div class="main-stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <div class="stat-data">
+                                <div class="stat-value">385.6</div>
+                                <div class="stat-unit">公里</div>
+                            </div>
+                        </div>
+                        <div class="main-stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-data">
+                                <div class="stat-value">24.5</div>
+                                <div class="stat-unit">小时</div>
+                            </div>
+                        </div>
+                        <div class="main-stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="stat-data">
+                                <div class="stat-value">9650</div>
+                                <div class="stat-unit">千卡</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-stats">
+                        <div class="sub-stat-item">
+                            <div class="sub-stat-label">骑行次数</div>
+                            <div class="sub-stat-value">15次</div>
+                        </div>
+                        <div class="sub-stat-item">
+                            <div class="sub-stat-label">爬升</div>
+                            <div class="sub-stat-value">2860米</div>
+                        </div>
+                        <div class="sub-stat-item">
+                            <div class="sub-stat-label">最长距离</div>
+                            <div class="sub-stat-value">78.3公里</div>
+                        </div>
+                        <div class="sub-stat-item">
+                            <div class="sub-stat-label">平均速度</div>
+                            <div class="sub-stat-value">22.4公里/时</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 成就与勋章 -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">我的成就</h2>
+                    <a href="#" class="section-more">全部 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="achievements-container">
+                    <div class="achievement-item achieved">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="achievement-title">初级骑士</div>
+                    </div>
+                    <div class="achievement-item achieved">
+                        <div class="achievement-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="achievement-title">登山者</div>
+                    </div>
+                    <div class="achievement-item achieved">
+                        <div class="achievement-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="achievement-title">连续骑行</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="achievement-title">百公里</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-flag-checkered"></i>
+                        </div>
+                        <div class="achievement-title">完赛者</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="achievement-title">骑行王者</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 我的骑行记录 -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">骑行记录</h2>
+                    <a href="#" class="section-more">历史 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="ride-records">
+                    <div class="ride-record-item">
+                        <div class="record-date">
+                            <div class="record-day">23</div>
+                            <div class="record-month">5月</div>
+                        </div>
+                        <div class="record-info">
+                            <div class="record-name">晨骑滨江公园</div>
+                            <div class="record-data">
+                                <span><i class="fas fa-road"></i> 26.8公里</span>
+                                <span><i class="fas fa-clock"></i> 1小时32分</span>
+                                <span><i class="fas fa-tachometer-alt"></i> 17.5公里/时</span>
+                            </div>
+                        </div>
+                        <div class="record-icon">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="ride-record-item">
+                        <div class="record-date">
+                            <div class="record-day">20</div>
+                            <div class="record-month">5月</div>
+                        </div>
+                        <div class="record-info">
+                            <div class="record-name">西湖环湖骑行</div>
+                            <div class="record-data">
+                                <span><i class="fas fa-road"></i> 15.2公里</span>
+                                <span><i class="fas fa-clock"></i> 55分钟</span>
+                                <span><i class="fas fa-tachometer-alt"></i> 16.6公里/时</span>
+                            </div>
+                        </div>
+                        <div class="record-icon">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="ride-record-item">
+                        <div class="record-date">
+                            <div class="record-day">17</div>
+                            <div class="record-month">5月</div>
+                        </div>
+                        <div class="record-info">
+                            <div class="record-name">城市绿道骑行</div>
+                            <div class="record-data">
+                                <span><i class="fas fa-road"></i> 32.5公里</span>
+                                <span><i class="fas fa-clock"></i> 1小时48分</span>
+                                <span><i class="fas fa-tachometer-alt"></i> 18.1公里/时</span>
+                            </div>
+                        </div>
+                        <div class="record-icon">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 常用功能 -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">常用功能</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="feature-name">我的收藏</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="feature-name">浏览历史</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <div class="feature-name">我的赛事</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="feature-name">我的车库</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <div class="feature-name">上传路线</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="feature-name">我的俱乐部</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="feature-name">我的钱包</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="feature-name">客服中心</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 我的动态 -->
+            <section class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">我的动态</h2>
+                    <a href="#" class="section-more">全部 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="my-posts">
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="post-time">
+                                <i class="far fa-clock"></i> 2天前
+                            </div>
+                            <div class="post-actions-menu">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>周末和骑友们一起参加了城郊森林公园骑行活动，空气清新，阳光正好！#周末骑行 #户外活动</p>
+                        </div>
+                        <div class="post-images">
+                            <div class="image-grid">
+                                <img src="https://picsum.photos/seed/cyclingforest/600/400" alt="骑行照片">
+                                <img src="https://picsum.photos/seed/cyclingsunset/600/400" alt="骑行照片">
+                            </div>
+                        </div>
+                        <div class="post-stats">
+                            <div class="stat-item"><i class="fas fa-heart"></i> 48</div>
+                            <div class="stat-item"><i class="far fa-comment"></i> 12</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部导航 -->
+        <footer class="app-footer">
+            <div class="nav-item">
+                <a href="index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="routes.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>路线</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="riding.html" style="color: inherit; text-decoration: none;">
+                    <div class="nav-center-btn">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="discover.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-compass"></i>
+                    <span>发现</span>
+                </a>
+            </div>
+            <div class="nav-item active">
+                <a href="profile.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

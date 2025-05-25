@@ -1,0 +1,16 @@
+{
+  "name": "knight-club-client",
+  "version": "1.0.0",
+  "description": "骑士圈 - 专业骑行社交与路线推荐App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "骑士圈团队",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

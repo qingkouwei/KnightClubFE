@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>登录 - 骑士圈</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container login-container">
+        <!-- 顶部区域 -->
+        <header class="login-header">
+            <div class="header-left">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="#" class="help-btn">帮助</a>
+            </div>
+        </header>
+
+        <!-- 主内容区域 -->
+        <main class="login-content">
+            <!-- Logo区域 -->
+            <section class="logo-section">
+                <div class="logo-container">
+                    <img src="images/logo.svg" alt="骑士圈" class="login-logo">
+                    <h1 class="app-name">骑士圈</h1>
+                    <div class="app-slogan">探索骑行，连接世界</div>
+                </div>
+            </section>
+
+            <!-- 登录表单 -->
+            <section class="login-form-section">
+                <div class="login-tabs">
+                    <div class="tab active">手机登录</div>
+                    <div class="tab">密码登录</div>
+                </div>
+
+                <div class="form-container phone-login active">
+                    <div class="input-group">
+                        <div class="input-prefix">+86</div>
+                        <input type="tel" placeholder="请输入手机号码" class="form-input phone-input">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="请输入验证码" class="form-input code-input">
+                        <button class="get-code-btn">获取验证码</button>
+                    </div>
+                    <div class="login-option">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="agreement-text">我已阅读并同意<a href="#">用户协议</a>和<a href="#">隐私政策</a></span>
+                        </label>
+                    </div>
+                    <button class="login-btn">登录</button>
+                </div>
+
+                <div class="form-container password-login">
+                    <div class="input-group">
+                        <div class="input-prefix"><i class="fas fa-user"></i></div>
+                        <input type="text" placeholder="手机号/用户名/邮箱" class="form-input">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-prefix"><i class="fas fa-lock"></i></div>
+                        <input type="password" placeholder="请输入密码" class="form-input">
+                        <div class="input-suffix toggle-password">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                    </div>
+                    <div class="login-option">
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span>记住密码</span>
+                        </label>
+                        <a href="#" class="forgot-password">忘记密码？</a>
+                    </div>
+                    <button class="login-btn">登录</button>
+                </div>
+            </section>
+
+            <!-- 其他登录方式 -->
+            <section class="other-login-section">
+                <div class="divider">
+                    <span>其他登录方式</span>
+                </div>
+                <div class="social-login">
+                    <a href="#" class="social-btn wechat">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                    <a href="#" class="social-btn qq">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                    <a href="#" class="social-btn weibo">
+                        <i class="fab fa-weibo"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 注册引导 -->
+            <section class="register-guide">
+                <span>还没有账号？</span>
+                <a href="register.html" class="register-link">立即注册</a>
+            </section>
+        </main>
+
+        <!-- 底部版权信息 -->
+        <footer class="login-footer">
+            <div class="copyright">© 2025 骑士圈 - 专业骑行社交与路线推荐App</div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

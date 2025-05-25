@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>发现 - 骑士圈</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/discover.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部导航栏 -->
+        <header class="app-header">
+            <div class="header-left">
+                <img src="images/logo.svg" alt="骑士圈" class="logo">
+            </div>
+            <div class="header-title">发现</div>
+            <div class="header-right">
+                <i class="fas fa-bell"></i>
+            </div>
+        </header>
+
+        <!-- 主内容区域 -->
+        <main class="app-content">
+            <!-- 导航标签栏 -->
+            <section class="tab-section">
+                <div class="tab-container">
+                    <div class="tab active">
+                        <i class="fas fa-rss"></i>
+                        <span>动态</span>
+                    </div>
+                    <div class="tab">
+                        <i class="fas fa-user-friends"></i>
+                        <span>骑友</span>
+                    </div>
+                    <div class="tab">
+                        <i class="fas fa-hashtag"></i>
+                        <span>话题</span>
+                    </div>
+                    <div class="tab">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>活动</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 动态创建框 -->
+            <section class="post-creator">
+                <div class="creator-header">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="我的头像" class="user-avatar">
+                    <div class="post-input">
+                        <input type="text" placeholder="分享你的骑行体验...">
+                    </div>
+                    <button class="post-btn"><i class="fas fa-camera"></i></button>
+                </div>
+            </section>
+
+            <!-- 标签页内容区域 -->
+            <div class="tab-content">
+                <!-- 动态标签页 - 默认显示 -->
+                <div class="tab-pane active" id="tab-posts">
+                    <!-- 热门话题 -->
+                    <section class="hot-topics">
+                        <div class="topics-scroll">
+                            <div class="topic-item">
+                                <i class="fas fa-fire"></i>
+                                <span>#周末骑行好去处</span>
+                            </div>
+                            <div class="topic-item">
+                                <i class="fas fa-fire"></i>
+                                <span>#新车开箱</span>
+                            </div>
+                            <div class="topic-item">
+                                <i class="fas fa-fire"></i>
+                                <span>#骑行装备推荐</span>
+                            </div>
+                            <div class="topic-item">
+                                <i class="fas fa-fire"></i>
+                                <span>#骑行百公里挑战</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 动态内容流 -->
+                    <section class="feed-container">
+                <!-- 动态帖子 -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <img src="https://i.pravatar.cc/150?img=42" alt="用户头像" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">山地骑行者 <span class="user-level">Lv.5</span></div>
+                            <div class="post-time">今天 08:45</div>
+                        </div>
+                        <button class="follow-btn">关注</button>
+                    </div>
+                    <div class="post-content">
+                        <p>今天清晨骑行武功山，云海日出太震撼了！分享一组照片，希望大家喜欢 #山地骑行 #风景摄影</p>
+                    </div>
+                    <div class="post-images">
+                        <div class="image-grid">
+                            <img src="https://picsum.photos/seed/mountain1/600/400" alt="骑行照片">
+                            <img src="https://picsum.photos/seed/mountain2/600/400" alt="骑行照片">
+                            <img src="https://picsum.photos/seed/mountain3/600/400" alt="骑行照片">
+                        </div>
+                    </div>
+                    <div class="post-location">
+                        <i class="fas fa-map-marker-alt"></i> 江西省萍乡市武功山
+                    </div>
+                    <div class="post-actions">
+                        <div class="action-item">
+                            <i class="far fa-heart"></i>
+                            <span>325</span>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-comment"></i>
+                            <span>48</span>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-share-square"></i>
+                        </div>
+                    </div>
+                    <div class="post-comments-preview">
+                        <div class="comment-item">
+                            <span class="comment-user">骑行天下</span>: 风景太美了！请问是用什么相机拍的？
+                        </div>
+                        <div class="comment-item">
+                            <span class="comment-user">单车旅行家</span>: 云海日出真是绝了，下个月我也要去武功山！
+                        </div>
+                        <div class="more-comments">
+                            查看全部48条评论 <i class="fas fa-angle-right"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 活动帖子 -->
+                <article class="post-card event-post">
+                    <div class="post-header">
+                        <img src="https://i.pravatar.cc/150?img=60" alt="俱乐部头像" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">自行车协会 <i class="fas fa-check-circle"></i></div>
+                            <div class="post-time">昨天 16:20</div>
+                        </div>
+                        <button class="follow-btn followed">已关注</button>
+                    </div>
+                    <div class="post-content">
+                        <p>【骑士挑战赛】2025年第三季环太湖骑行挑战赛报名开始啦！本次赛事全程220公里，分为竞技组和休闲组，欢迎各位骑友踊跃报名！</p>
+                    </div>
+                    <div class="event-card">
+                        <img src="https://picsum.photos/seed/cycling1/800/400" alt="活动海报" class="event-banner">
+                        <div class="event-info">
+                            <h3 class="event-name">2025环太湖骑行挑战赛</h3>
+                            <div class="event-details">
+                                <div class="event-detail">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>2025年6月15日 07:00</span>
+                                </div>
+                                <div class="event-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>江苏省苏州市太湖国家旅游度假区</span>
+                                </div>
+                                <div class="event-detail">
+                                    <i class="fas fa-users"></i>
+                                    <span>限额1000人 (已报名: 567人)</span>
+                                </div>
+                                <div class="event-detail">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    <span>参赛费: ¥180/人</span>
+                                </div>
+                            </div>
+                            <button class="join-event-btn">立即报名</button>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="action-item">
+                            <i class="far fa-heart"></i>
+                            <span>198</span>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-comment"></i>
+                            <span>34</span>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-share-square"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 骑行记录帖 -->
+                <article class="post-card ride-post">
+                    <div class="post-header">
+                        <img src="https://i.pravatar.cc/150?img=54" alt="用户头像" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">骑行达人 <span class="user-level">Lv.8</span></div>
+                            <div class="post-time">2天前</div>
+                        </div>
+                        <button class="follow-btn followed">已关注</button>
+                    </div>
+                    <div class="post-content">
+                        <p>完成了本月的骑行目标，分享一下今天的骑行数据，新的个人最佳！ #骑行训练 #突破自我</p>
+                    </div>
+                    <div class="ride-data-card">
+                        <div class="ride-map">
+                            <img src="images/ride-map.jpg" alt="骑行轨迹">
+                            <div class="ride-distance">105.7 公里</div>
+                        </div>
+                        <div class="ride-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">4:26:38</div>
+                                <div class="stat-label">时间</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">23.8</div>
+                                <div class="stat-label">均速 (km/h)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">842</div>
+                                <div class="stat-label">爬升 (m)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">2485</div>
+                                <div class="stat-label">卡路里</div>
+                            </div>
+                        </div>
+                        <div class="bike-info">
+                            <div class="bike-icon"><i class="fas fa-bicycle"></i></div>
+                            <div class="bike-name">捷安特 TCR Advanced Pro 0</div>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="action-item">
+                            <i class="fas fa-heart"></i>
+                            <span>435</span>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-comment"></i>
+                            <span>72</span>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-share-square"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 视频帖 -->
+                <article class="post-card video-post">
+                    <div class="post-header">
+                        <img src="https://i.pravatar.cc/150?img=28" alt="用户头像" class="user-avatar">
+                        <div class="user-info">
+                            <div class="user-name">单车生活 <i class="fas fa-check-circle"></i></div>
+                            <div class="post-time">3天前</div>
+                        </div>
+                        <button class="follow-btn">关注</button>
+                    </div>
+                    <div class="post-content">
+                        <p>【骑行技巧】上坡爬坡省力技巧分享，让你轻松征服各种坡度！#骑行技巧 #新手教学</p>
+                    </div>
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <img src="https://picsum.photos/seed/uphill/800/450" alt="视频缩略图">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-duration">05:32</div>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <div class="action-item">
+                            <i class="far fa-heart"></i>
+                            <span>562</span>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-comment"></i>
+                            <span>94</span>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                        <div class="action-item">
+                            <i class="far fa-share-square"></i>
+                        </div>
+                    </div>
+                </article>
+                    </section>
+
+                    <!-- 加载更多 -->
+                    <div class="load-more">
+                        <span>加载更多</span>
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                </div>
+                
+                <!-- 骑友标签页 -->
+                <div class="tab-pane" id="tab-friends">
+                    <section class="riders-container">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="搜索骑友...">
+                        </div>
+                        
+                        <h3 class="section-subtitle">推荐关注</h3>
+                        <div class="riders-list">
+                            <div class="rider-card">
+                                <img src="https://i.pravatar.cc/150?img=33" alt="骑友头像" class="rider-avatar">
+                                <div class="rider-info">
+                                    <div class="rider-name">山地车达人</div>
+                                    <div class="rider-bio">热爱山地骑行，专注越野路线</div>
+                                </div>
+                                <button class="follow-btn">关注</button>
+                            </div>
+                            
+                            <div class="rider-card">
+                                <img src="https://i.pravatar.cc/150?img=23" alt="骑友头像" class="rider-avatar">
+                                <div class="rider-info">
+                                    <div class="rider-name">城市骑行者</div>
+                                    <div class="rider-bio">探索城市角落的单车爱好者</div>
+                                </div>
+                                <button class="follow-btn">关注</button>
+                            </div>
+                            
+                            <div class="rider-card">
+                                <img src="https://i.pravatar.cc/150?img=63" alt="骑友头像" class="rider-avatar">
+                                <div class="rider-info">
+                                    <div class="rider-name">骑行教练</div>
+                                    <div class="rider-bio">专业骑行指导，5年教练经验</div>
+                                </div>
+                                <button class="follow-btn followed">已关注</button>
+                            </div>
+                        </div>
+                        
+                        <div class="load-more">
+                            <span>加载更多</span>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- 话题标签页 -->
+                <div class="tab-pane" id="tab-topics">
+                    <section class="topics-container">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="搜索话题...">
+                        </div>
+                        
+                        <h3 class="section-subtitle">热门话题</h3>
+                        <div class="topics-grid">
+                            <div class="topic-card">
+                                <div class="topic-header">#骑行百公里挑战</div>
+                                <div class="topic-stats">2.3万人参与 · 1.5万篇内容</div>
+                                <button class="topic-follow-btn">关注</button>
+                            </div>
+                            
+                            <div class="topic-card">
+                                <div class="topic-header">#新车开箱</div>
+                                <div class="topic-stats">1.8万人参与 · 8千篇内容</div>
+                                <button class="topic-follow-btn">关注</button>
+                            </div>
+                            
+                            <div class="topic-card">
+                                <div class="topic-header">#周末骑行好去处</div>
+                                <div class="topic-stats">3.2万人参与 · 2.1万篇内容</div>
+                                <button class="topic-follow-btn followed">已关注</button>
+                            </div>
+                            
+                            <div class="topic-card">
+                                <div class="topic-header">#骑行装备推荐</div>
+                                <div class="topic-stats">2.5万人参与 · 1.2万篇内容</div>
+                                <button class="topic-follow-btn">关注</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- 活动标签页 -->
+                <div class="tab-pane" id="tab-events">
+                    <section class="events-container">
+                        <div class="events-filter">
+                            <span class="filter-item active">全部</span>
+                            <span class="filter-item">附近</span>
+                            <span class="filter-item">官方</span>
+                            <span class="filter-item">已报名</span>
+                        </div>
+                        
+                        <div class="events-list">
+                            <div class="event-item">
+                                <div class="event-image">
+                                    <img src="https://picsum.photos/seed/eventa/800/400" alt="活动图片">
+                                    <span class="event-status ongoing">进行中</span>
+                                </div>
+                                <div class="event-details">
+                                    <h3 class="event-title">2025环西湖百公里挑战赛</h3>
+                                    <div class="event-info">
+                                        <div class="event-time"><i class="far fa-calendar-alt"></i> 5月28日 08:00</div>
+                                        <div class="event-location"><i class="fas fa-map-marker-alt"></i> 杭州西湖文化广场</div>
+                                    </div>
+                                    <div class="event-brief">
+                                        本次挑战赛设有休闲组、竞速组，全程环绕西湖、钱塘江畔，领略杭州美景。
+                                    </div>
+                                    <div class="event-footer">
+                                        <div class="event-participants">
+                                            <div class="participant-avatars">
+                                                <img src="https://i.pravatar.cc/150?img=1" alt="参与者">
+                                                <img src="https://i.pravatar.cc/150?img=2" alt="参与者">
+                                                <img src="https://i.pravatar.cc/150?img=3" alt="参与者">
+                                            </div>
+                                            <span class="participant-count">368人已报名</span>
+                                        </div>
+                                        <button class="join-event-btn">立即报名</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="event-item">
+                                <div class="event-image">
+                                    <img src="https://picsum.photos/seed/eventb/800/400" alt="活动图片">
+                                    <span class="event-status upcoming">即将开始</span>
+                                </div>
+                                <div class="event-details">
+                                    <h3 class="event-title">夏日夜骑 - 城市灯光探索</h3>
+                                    <div class="event-info">
+                                        <div class="event-time"><i class="far fa-calendar-alt"></i> 6月15日 19:30</div>
+                                        <div class="event-location"><i class="fas fa-map-marker-alt"></i> 上海外滩源</div>
+                                    </div>
+                                    <div class="event-brief">
+                                        夏夜骑行，感受不一样的城市风情，体验都市夜景的独特魅力。
+                                    </div>
+                                    <div class="event-footer">
+                                        <div class="event-participants">
+                                            <div class="participant-avatars">
+                                                <img src="https://i.pravatar.cc/150?img=4" alt="参与者">
+                                                <img src="https://i.pravatar.cc/150?img=5" alt="参与者">
+                                                <img src="https://i.pravatar.cc/150?img=6" alt="参与者">
+                                            </div>
+                                            <span class="participant-count">215人已报名</span>
+                                        </div>
+                                        <button class="join-event-btn">立即报名</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="load-more">
+                            <span>加载更多</span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- 底部导航 -->
+        <footer class="app-footer">
+            <div class="nav-item">
+                <a href="index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="routes.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>路线</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="riding.html" style="color: inherit; text-decoration: none;">
+                    <div class="nav-center-btn">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-item active">
+                <a href="discover.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-compass"></i>
+                    <span>发现</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="profile.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-user"></i>
+                    <span>我的</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/discover.js"></script>
+</body>
+</html>
